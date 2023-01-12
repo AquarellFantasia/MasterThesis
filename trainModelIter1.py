@@ -109,6 +109,7 @@ vg = datagenerator(32, (600,800), valid_df, 1, 3)
 history = model_no_max_pool.fit(x=tg,
                     batch_size=32,
                     epochs=20,
+                    verbose=2,
                     validation_data=vg)
 
 

@@ -9,12 +9,12 @@
 #BSUB -n 4
 #BSUB -R "span[hosts=1]"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 20:00
+#BSUB -W 23:30
 # request 5GB of memory
 #BSUB -R "rusage[mem=5GB]"
 ### -- Specify the output and error file. %J is the job-id --
 ### -- -o and -e mean append, -oo and -eo mean overwrite --
-#BSUB -o generating-mean_squared_error-20epochs.out
+#BSUB -o Logs/test_train_script%J.out
 # -- end of LSF options --
 
 # Necessary modules
@@ -23,4 +23,4 @@ source venv/bin/activate
 
 module swap cuda/12.0
 
-python trainModelIter1.py
+python trainModelIter2.py 100 "adam" "[\"accuracy\", tf.keras.metrics.MeanSquaredError(name=\"mean_squared_error\", dtype=None)]" "square_abs_min_individual_loss" "black_background_500x500.csv" 2
