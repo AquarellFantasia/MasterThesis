@@ -3,6 +3,8 @@
 ######################################################################
 import sys
 import os
+import uuid
+
 import pandas as pd
 import numpy as np
 from datetime import datetime 
@@ -11,9 +13,13 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
+
+from keras.optimizers import RMSprop
+from keras.optimizers import Adam
 from keras.models import Model
 from keras.utils import Sequence
 from keras.utils import load_img
+
 import keras.backend as K
 
 ###################################################################### 
@@ -25,23 +31,30 @@ import keras.backend as K
 # sys.argv[4] - loss function name
 # sys.argv[5] - image data path csv
 # sys.argv[6] - verbose. 0 - no epoch logs; 1 - all logs; 2 - only epochs 
+# sys.argv[7] - name to differentiate the files from one another
 
 # load defaults
 epochs      = int(sys.argv[1])
-optimizer   = sys.argv[2]
+optimizer   = eval(sys.argv[2])
 metrics     = eval(sys.argv[3])
 loss_string = sys.argv[4]
 csv_path    = sys.argv[5]
 verbose     = int(sys.argv[6])
+unique_name = sys.argv[7]
 
-print("Epochs: ", epochs)
-print("Optimizer: ", optimizer)
-print("Metrics: ", metrics)
-print("Loss function name: ", loss_string)
-print("Csv file used: ", csv_path)
-print("Verbose: ", verbose)
+print("Epochs: ", sys.argv[1])
+print("Optimizer: ", sys.argv[2])
+print("Metrics: ", sys.argv[3])
+print("Loss function name: ", sys.argv[4])
+print("Csv file used: ", sys.argv[5])
+print("Verbose: ", sys.argv[6])
+print("Unique name: ", sys.argv[7])
 
 input_size = 500
+
+# image id, to easily find it
+random_id = uuid.uuid1()
+random_id_str = random_id.hex
 
 ######################################################################    
 ####################### Load refference data #########################    
@@ -107,7 +120,7 @@ class datagenerator(tf.keras.utils.Sequence):
             data /= 255
             data.shape = (1,) + data.shape
             x[i] = np.asarray(data)
-        return np.array(x).astype("float32"), np.array(y).astype("float32")
+        return x.astype("float32"), np.array(y).astype("float32")
     
 ######################################################################    
 ######################## Loading the model ###########################    
@@ -115,10 +128,7 @@ class datagenerator(tf.keras.utils.Sequence):
 print(''' ################ MODEL ############### \n 
 inputs = keras.Input(shape=(input_size, input_size, 1))
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
-x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
-x = layers.MaxPooling2D(pool_size=4)(x)
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
-x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
 x = layers.MaxPooling2D(pool_size=4)(x)
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
@@ -135,10 +145,7 @@ outputs = layers.Dense(3)(x)
 
 inputs = keras.Input(shape=(input_size, input_size, 1))
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
-x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
-x = layers.MaxPooling2D(pool_size=4)(x)
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
-x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
 x = layers.MaxPooling2D(pool_size=4)(x)
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
 x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
@@ -226,7 +233,7 @@ plt.ylabel("loss")
 plt.xlabel("epochs")
 
 plt.legend()
-plt.savefig("Graphs/{}_Image_{}_{}_{}.png".format(datetime.now().strftime("%H:%M_%d_%m"), epochs, optimizer, loss_string))
+plt.savefig("Graphs/{}_Image_{}.png".format(random_id_str, unique_name))
 
 ######################################################################    
 ######################### Evaluating models ##########################    
@@ -265,4 +272,4 @@ print("############### PREDICTIONS ###############")
 ########################### Save a model #############################    
 ###################################################################### 
 
-model.save("Models/{}_model_{}_{}_{}.h5".format(datetime.now().strftime("%H:%M_%d_%m"), epochs, optimizer, loss_string), save_format = 'h5')
+model.save("Models/{}_model_{}.h5".format(random_id_str, unique_name), save_format = 'h5')
