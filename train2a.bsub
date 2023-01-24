@@ -9,18 +9,16 @@
 #BSUB -n 4
 #BSUB -R "span[hosts=1]"
 ### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
-#BSUB -W 15:30
+#BSUB -W 2:00
 # request 5GB of memory
 #BSUB -R "rusage[mem=5GB]"
 ### -- Specify the output and error file. %J is the job-id --
 ### -- -o and -e mean append, -oo and -eo mean overwrite --
-#BSUB -o Logs/adam_amsgrad_001%J.out
+#BSUB -o Logs/adam_1_0001%J.out
 # -- end of LSF options --
 
 # Necessary modules
 cd project 
 source venv/bin/activate
 
-module swap cuda/12.0
-
-python trainModelIter2.py 100 "Adam(learning_rate=0.01, amsgrad = True)"  "[\"accuracy\", tf.keras.metrics.MeanSquaredError(name=\"mean_squared_error\", dtype=None)]" "abs_loss_function" "black_background_500x500.csv" 2 "adam_amsgrad_001"
+python trainModelIter2.py 100 "Adam(learning_rate=0.001, amsgrad=False)"  "[\"accuracy\", tf.keras.metrics.MeanSquaredError(name=\"mean_squared_error\", dtype=None)]" "abs_loss_function" "black_background_500x500.csv" 2 "adam_1_0001"

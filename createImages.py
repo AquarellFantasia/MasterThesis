@@ -30,7 +30,7 @@ from skimage import filters
 from skimage import exposure
 from skimage.filters import gaussian
 
-# Locala normalization of brightness in image    
+# Local normalization of brightness in image    
 def local_normalize(images, sigma1, sigma2):
     if len(images.shape)==4:
         for i in range(images.shape[0]):
