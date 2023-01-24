@@ -1,0 +1,85 @@
+/zhome/ab/7/153983/.lsbatch/1673719838.15187416.shell: line 21: cd: project: No such file or directory
+Loaded dependency [python3/3.10.7]: gcc/11.3.0-binutils-2.38
+Loaded module: python3/3.10.7
+
+Loading python3/3.10.7
+  Loading requirement: gcc/11.3.0-binutils-2.38
+Loaded module: cuda/12.0
+Loaded module: cudnn/v8.3.2.44-prod-cuda-11.X
+Loaded module: cuda/12.0
+2023-01-14 21:05:47.626123: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-14 21:05:47.784292: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-01-14 21:05:47.789451: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-14 21:05:47.789470: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-01-14 21:05:48.927107: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-14 21:05:48.927670: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-14 21:05:48.927680: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Traceback (most recent call last):
+  File "/zhome/ab/7/153983/project/trainModelIter2.py", line 31, in <module>
+    optimizer   = eval(sys.argv[2])
+  File "<string>", line 1, in <module>
+NameError: name 'RMSprop' is not defined
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 15187416: <s202741-train> in cluster <dcc> Exited
+
+Job <s202741-train> was submitted from host <n-62-20-1> by user <s202741> in cluster <dcc> at Sat Jan 14 19:10:38 2023
+Job was executed on host(s) <4*n-62-11-16>, in queue <gpuv100>, as user <s202741> in cluster <dcc> at Sat Jan 14 21:05:45 2023
+</zhome/ab/7/153983> was used as the home directory.
+</zhome/ab/7/153983/project> was used as the working directory.
+Started at Sat Jan 14 21:05:45 2023
+Terminated at Sat Jan 14 21:05:52 2023
+Results reported at Sat Jan 14 21:05:52 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+### General options
+### -- specify queue --   NOTE: TitanX is significantly faster than K80
+#BSUB -q gpuv100
+#BSUB -gpu "num=1:mode=exclusive_process"
+### -- set the job Name --
+#BSUB -J s202741-train
+### -- ask for number of cores (default: 1) --
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
+#BSUB -W 15:30
+# request 5GB of memory
+#BSUB -R "rusage[mem=5GB]"
+### -- Specify the output and error file. %J is the job-id --
+### -- -o and -e mean append, -oo and -eo mean overwrite --
+#BSUB -o Logs/LayerNormalization%J.out
+# -- end of LSF options --
+
+# Necessary modules
+cd project 
+source venv/bin/activate
+
+module swap cuda/12.0
+
+python trainModelIter2.py 100 "RMSprop(learning_rate=0.01, rho=0.9, epsilon=1e-08)" "[\"accuracy\", tf.keras.metrics.MeanSquaredError(name=\"mean_squared_error\", dtype=None)]" "square_abs_min_individual_loss" "black_background_500x500.csv" 2 "_layer_norm_"
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   3.07 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     20480.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   7 sec.
+    Turnaround time :                            6914 sec.
+
+The output (if any) is above this job summary.
+

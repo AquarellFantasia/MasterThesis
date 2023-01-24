@@ -1,0 +1,420 @@
+/zhome/ab/7/153983/.lsbatch/1673977652.15205053.shell: line 21: cd: project: No such file or directory
+Loaded dependency [python3/3.10.7]: gcc/11.3.0-binutils-2.38
+Loaded module: python3/3.10.7
+
+Loading python3/3.10.7
+  Loading requirement: gcc/11.3.0-binutils-2.38
+Loaded module: cuda/12.0
+Loaded module: cudnn/v8.3.2.44-prod-cuda-11.X
+Loaded module: cuda/12.0
+2023-01-17 19:01:42.825062: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-17 19:01:43.241800: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-01-17 19:01:43.346513: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:43.346563: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-01-17 19:01:45.792250: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:45.792842: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:45.792870: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-01-17 19:01:50.107453: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:50.108365: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:50.109034: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:50.109891: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcufft.so.10'; dlerror: libcufft.so.10: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:50.352115: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cuda/12.0.0/lib64:/appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-17 19:01:50.353825: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1934] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2023-01-17 19:01:50.354878: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Epochs:  100
+Optimizer:  Adam(learning_rate=0.001, amsgrad = False)
+Metrics:  ["accuracy", tf.keras.metrics.MeanSquaredError(name="mean_squared_error", dtype=None)]
+Loss function name:  abs_loss_function
+Csv file used:  black_background_500x500.csv
+Verbose:  2
+Unique name:  adam_0001
+ ################ MODEL ############### 
+ 
+inputs = keras.Input(shape=(input_size, input_size, 1))
+x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(inputs)
+x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+x = layers.MaxPooling2D(pool_size=4)(x)
+x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+x = layers.MaxPooling2D(pool_size=4)(x)
+x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+x = layers.MaxPooling2D(pool_size=4)(x)
+x = layers.Flatten()(x)
+x = layers.Dense(128, activation="relu")(x)
+x = layers.Dense(16, activation="relu")(x)
+outputs = layers.Dense(3)(x)
+
+
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 500, 500, 1)]     0         
+                                                                 
+ conv2d (Conv2D)             (None, 498, 498, 32)      320       
+                                                                 
+ conv2d_1 (Conv2D)           (None, 496, 496, 32)      9248      
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 124, 124, 32)     0         
+ )                                                               
+                                                                 
+ conv2d_2 (Conv2D)           (None, 122, 122, 32)      9248      
+                                                                 
+ conv2d_3 (Conv2D)           (None, 120, 120, 32)      9248      
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 30, 30, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_4 (Conv2D)           (None, 28, 28, 32)        9248      
+                                                                 
+ conv2d_5 (Conv2D)           (None, 26, 26, 32)        9248      
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 6, 6, 32)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 1152)              0         
+                                                                 
+ dense (Dense)               (None, 128)               147584    
+                                                                 
+ dense_1 (Dense)             (None, 16)                2064      
+                                                                 
+ dense_2 (Dense)             (None, 3)                 51        
+                                                                 
+=================================================================
+Total params: 196,259
+Trainable params: 196,259
+Non-trainable params: 0
+_________________________________________________________________
+/zhome/ab/7/153983/project/venv/lib/python3.10/site-packages/keras/utils/image_utils.py:409: UserWarning: grayscale is deprecated. Please use color_mode = "grayscale"
+  warnings.warn(
+Epoch 1/100
+273/273 - 458s - loss: 0.2399 - accuracy: 0.3166 - mean_squared_error: 0.2938 - val_loss: 0.2588 - val_accuracy: 0.2923 - val_mean_squared_error: 0.2770 - 458s/epoch - 2s/step
+Epoch 2/100
+273/273 - 461s - loss: 0.2416 - accuracy: 0.2482 - mean_squared_error: 0.3518 - val_loss: 0.2614 - val_accuracy: 0.3548 - val_mean_squared_error: 0.3124 - 461s/epoch - 2s/step
+Epoch 3/100
+273/273 - 460s - loss: 0.2469 - accuracy: 0.3104 - mean_squared_error: 0.3602 - val_loss: 0.2387 - val_accuracy: 0.3397 - val_mean_squared_error: 0.3700 - 460s/epoch - 2s/step
+Epoch 4/100
+273/273 - 460s - loss: 0.2293 - accuracy: 0.3629 - mean_squared_error: 0.3161 - val_loss: 0.2474 - val_accuracy: 0.3639 - val_mean_squared_error: 0.3612 - 460s/epoch - 2s/step
+Epoch 5/100
+273/273 - 461s - loss: 0.2049 - accuracy: 0.3389 - mean_squared_error: 0.3741 - val_loss: 0.2703 - val_accuracy: 0.3669 - val_mean_squared_error: 0.3722 - 461s/epoch - 2s/step
+Epoch 6/100
+273/273 - 460s - loss: 0.1515 - accuracy: 0.2350 - mean_squared_error: 0.4534 - val_loss: 0.2538 - val_accuracy: 0.2429 - val_mean_squared_error: 0.4255 - 460s/epoch - 2s/step
+Epoch 7/100
+273/273 - 459s - loss: 0.1153 - accuracy: 0.3246 - mean_squared_error: 0.4403 - val_loss: 0.2539 - val_accuracy: 0.3841 - val_mean_squared_error: 0.3825 - 459s/epoch - 2s/step
+Epoch 8/100
+273/273 - 459s - loss: 0.1111 - accuracy: 0.3022 - mean_squared_error: 0.4333 - val_loss: 0.2379 - val_accuracy: 0.2480 - val_mean_squared_error: 0.4434 - 459s/epoch - 2s/step
+Epoch 9/100
+273/273 - 459s - loss: 0.0993 - accuracy: 0.3308 - mean_squared_error: 0.4818 - val_loss: 0.2718 - val_accuracy: 0.3548 - val_mean_squared_error: 0.4197 - 459s/epoch - 2s/step
+Epoch 10/100
+273/273 - 459s - loss: 0.0953 - accuracy: 0.2969 - mean_squared_error: 0.4554 - val_loss: 0.2664 - val_accuracy: 0.2984 - val_mean_squared_error: 0.4013 - 459s/epoch - 2s/step
+Epoch 11/100
+273/273 - 459s - loss: 0.0912 - accuracy: 0.3483 - mean_squared_error: 0.4636 - val_loss: 0.2316 - val_accuracy: 0.3730 - val_mean_squared_error: 0.4215 - 459s/epoch - 2s/step
+Epoch 12/100
+273/273 - 458s - loss: 0.0961 - accuracy: 0.2943 - mean_squared_error: 0.4754 - val_loss: 0.2524 - val_accuracy: 0.3488 - val_mean_squared_error: 0.3694 - 458s/epoch - 2s/step
+Epoch 13/100
+273/273 - 459s - loss: 0.0905 - accuracy: 0.3324 - mean_squared_error: 0.4691 - val_loss: 0.2836 - val_accuracy: 0.3911 - val_mean_squared_error: 0.4160 - 459s/epoch - 2s/step
+Epoch 14/100
+273/273 - 459s - loss: 0.0885 - accuracy: 0.3744 - mean_squared_error: 0.5065 - val_loss: 0.2433 - val_accuracy: 0.1663 - val_mean_squared_error: 0.3929 - 459s/epoch - 2s/step
+Epoch 15/100
+273/273 - 459s - loss: 0.0851 - accuracy: 0.3302 - mean_squared_error: 0.4852 - val_loss: 0.2318 - val_accuracy: 0.2883 - val_mean_squared_error: 0.4105 - 459s/epoch - 2s/step
+Epoch 16/100
+273/273 - 459s - loss: 0.0861 - accuracy: 0.2796 - mean_squared_error: 0.4831 - val_loss: 0.2535 - val_accuracy: 0.3397 - val_mean_squared_error: 0.4311 - 459s/epoch - 2s/step
+Epoch 17/100
+273/273 - 459s - loss: 0.0828 - accuracy: 0.2997 - mean_squared_error: 0.4908 - val_loss: 0.2549 - val_accuracy: 0.2823 - val_mean_squared_error: 0.3981 - 459s/epoch - 2s/step
+Epoch 18/100
+273/273 - 458s - loss: 0.0851 - accuracy: 0.3421 - mean_squared_error: 0.5050 - val_loss: 0.2756 - val_accuracy: 0.3034 - val_mean_squared_error: 0.4536 - 458s/epoch - 2s/step
+Epoch 19/100
+273/273 - 459s - loss: 0.0846 - accuracy: 0.3718 - mean_squared_error: 0.4826 - val_loss: 0.2329 - val_accuracy: 0.2520 - val_mean_squared_error: 0.4929 - 459s/epoch - 2s/step
+Epoch 20/100
+273/273 - 459s - loss: 0.0831 - accuracy: 0.3130 - mean_squared_error: 0.5311 - val_loss: 0.2473 - val_accuracy: 0.3196 - val_mean_squared_error: 0.5426 - 459s/epoch - 2s/step
+Epoch 21/100
+273/273 - 458s - loss: 0.0829 - accuracy: 0.3090 - mean_squared_error: 0.4946 - val_loss: 0.2597 - val_accuracy: 0.3185 - val_mean_squared_error: 0.4176 - 458s/epoch - 2s/step
+Epoch 22/100
+273/273 - 458s - loss: 0.0829 - accuracy: 0.3522 - mean_squared_error: 0.5136 - val_loss: 0.2572 - val_accuracy: 0.1946 - val_mean_squared_error: 0.4453 - 458s/epoch - 2s/step
+Epoch 23/100
+273/273 - 458s - loss: 0.0796 - accuracy: 0.3146 - mean_squared_error: 0.5123 - val_loss: 0.2555 - val_accuracy: 0.2611 - val_mean_squared_error: 0.4753 - 458s/epoch - 2s/step
+Epoch 24/100
+273/273 - 458s - loss: 0.0846 - accuracy: 0.3530 - mean_squared_error: 0.5194 - val_loss: 0.2554 - val_accuracy: 0.3014 - val_mean_squared_error: 0.4245 - 458s/epoch - 2s/step
+Epoch 25/100
+273/273 - 459s - loss: 0.0783 - accuracy: 0.3272 - mean_squared_error: 0.5212 - val_loss: 0.2428 - val_accuracy: 0.2631 - val_mean_squared_error: 0.3766 - 459s/epoch - 2s/step
+Epoch 26/100
+273/273 - 458s - loss: 0.0794 - accuracy: 0.3191 - mean_squared_error: 0.5025 - val_loss: 0.2459 - val_accuracy: 0.4315 - val_mean_squared_error: 0.4429 - 458s/epoch - 2s/step
+Epoch 27/100
+273/273 - 458s - loss: 0.0777 - accuracy: 0.3560 - mean_squared_error: 0.5633 - val_loss: 0.2699 - val_accuracy: 0.3498 - val_mean_squared_error: 0.5305 - 458s/epoch - 2s/step
+Epoch 28/100
+273/273 - 458s - loss: 0.0775 - accuracy: 0.3051 - mean_squared_error: 0.5228 - val_loss: 0.2531 - val_accuracy: 0.3246 - val_mean_squared_error: 0.5003 - 458s/epoch - 2s/step
+Epoch 29/100
+273/273 - 458s - loss: 0.0814 - accuracy: 0.3053 - mean_squared_error: 0.5571 - val_loss: 0.2598 - val_accuracy: 0.1966 - val_mean_squared_error: 0.5432 - 458s/epoch - 2s/step
+Epoch 30/100
+273/273 - 458s - loss: 0.0761 - accuracy: 0.3130 - mean_squared_error: 0.5220 - val_loss: 0.2578 - val_accuracy: 0.3679 - val_mean_squared_error: 0.4252 - 458s/epoch - 2s/step
+Epoch 31/100
+273/273 - 458s - loss: 0.0741 - accuracy: 0.3045 - mean_squared_error: 0.5078 - val_loss: 0.2186 - val_accuracy: 0.2933 - val_mean_squared_error: 0.4439 - 458s/epoch - 2s/step
+Epoch 32/100
+273/273 - 458s - loss: 0.0765 - accuracy: 0.3336 - mean_squared_error: 0.4993 - val_loss: 0.2656 - val_accuracy: 0.2540 - val_mean_squared_error: 0.4047 - 458s/epoch - 2s/step
+Epoch 33/100
+273/273 - 458s - loss: 0.0737 - accuracy: 0.2870 - mean_squared_error: 0.5287 - val_loss: 0.2623 - val_accuracy: 0.3065 - val_mean_squared_error: 0.4389 - 458s/epoch - 2s/step
+Epoch 34/100
+273/273 - 458s - loss: 0.0743 - accuracy: 0.2792 - mean_squared_error: 0.5150 - val_loss: 0.2390 - val_accuracy: 0.3760 - val_mean_squared_error: 0.4557 - 458s/epoch - 2s/step
+Epoch 35/100
+273/273 - 458s - loss: 0.0748 - accuracy: 0.3436 - mean_squared_error: 0.5220 - val_loss: 0.2591 - val_accuracy: 0.2137 - val_mean_squared_error: 0.5006 - 458s/epoch - 2s/step
+Epoch 36/100
+273/273 - 457s - loss: 0.0763 - accuracy: 0.3412 - mean_squared_error: 0.5279 - val_loss: 0.2538 - val_accuracy: 0.3558 - val_mean_squared_error: 0.5094 - 457s/epoch - 2s/step
+Epoch 37/100
+273/273 - 458s - loss: 0.0780 - accuracy: 0.2902 - mean_squared_error: 0.4940 - val_loss: 0.2591 - val_accuracy: 0.2913 - val_mean_squared_error: 0.4910 - 458s/epoch - 2s/step
+Epoch 38/100
+273/273 - 459s - loss: 0.0806 - accuracy: 0.2683 - mean_squared_error: 0.5135 - val_loss: 0.2666 - val_accuracy: 0.4466 - val_mean_squared_error: 0.4124 - 459s/epoch - 2s/step
+Epoch 39/100
+273/273 - 458s - loss: 0.0768 - accuracy: 0.3313 - mean_squared_error: 0.4835 - val_loss: 0.2496 - val_accuracy: 0.3821 - val_mean_squared_error: 0.4093 - 458s/epoch - 2s/step
+Epoch 40/100
+273/273 - 458s - loss: 0.0782 - accuracy: 0.3251 - mean_squared_error: 0.4994 - val_loss: 0.2265 - val_accuracy: 0.2782 - val_mean_squared_error: 0.5036 - 458s/epoch - 2s/step
+Epoch 41/100
+273/273 - 457s - loss: 0.0769 - accuracy: 0.3188 - mean_squared_error: 0.4711 - val_loss: 0.2518 - val_accuracy: 0.2470 - val_mean_squared_error: 0.4198 - 457s/epoch - 2s/step
+Epoch 42/100
+273/273 - 458s - loss: 0.0748 - accuracy: 0.3082 - mean_squared_error: 0.5272 - val_loss: 0.2719 - val_accuracy: 0.3054 - val_mean_squared_error: 0.4607 - 458s/epoch - 2s/step
+Epoch 43/100
+273/273 - 458s - loss: 0.0764 - accuracy: 0.3079 - mean_squared_error: 0.5213 - val_loss: 0.2616 - val_accuracy: 0.2429 - val_mean_squared_error: 0.5738 - 458s/epoch - 2s/step
+Epoch 44/100
+273/273 - 457s - loss: 0.0759 - accuracy: 0.3143 - mean_squared_error: 0.4927 - val_loss: 0.2479 - val_accuracy: 0.3095 - val_mean_squared_error: 0.4245 - 457s/epoch - 2s/step
+Epoch 45/100
+273/273 - 458s - loss: 0.0760 - accuracy: 0.3665 - mean_squared_error: 0.4760 - val_loss: 0.2465 - val_accuracy: 0.3327 - val_mean_squared_error: 0.4443 - 458s/epoch - 2s/step
+Epoch 46/100
+273/273 - 457s - loss: 0.0784 - accuracy: 0.3391 - mean_squared_error: 0.4993 - val_loss: 0.2269 - val_accuracy: 0.2873 - val_mean_squared_error: 0.4448 - 457s/epoch - 2s/step
+Epoch 47/100
+273/273 - 457s - loss: 0.0747 - accuracy: 0.3927 - mean_squared_error: 0.5138 - val_loss: 0.2433 - val_accuracy: 0.2873 - val_mean_squared_error: 0.4501 - 457s/epoch - 2s/step
+Epoch 48/100
+273/273 - 458s - loss: 0.0723 - accuracy: 0.3585 - mean_squared_error: 0.5136 - val_loss: 0.2608 - val_accuracy: 0.4425 - val_mean_squared_error: 0.4222 - 458s/epoch - 2s/step
+Epoch 49/100
+273/273 - 457s - loss: 0.0720 - accuracy: 0.3315 - mean_squared_error: 0.5257 - val_loss: 0.2708 - val_accuracy: 0.2873 - val_mean_squared_error: 0.4555 - 457s/epoch - 2s/step
+Epoch 50/100
+273/273 - 457s - loss: 0.0774 - accuracy: 0.3481 - mean_squared_error: 0.5529 - val_loss: 0.2574 - val_accuracy: 0.4012 - val_mean_squared_error: 0.4120 - 457s/epoch - 2s/step
+Epoch 51/100
+273/273 - 458s - loss: 0.0785 - accuracy: 0.3447 - mean_squared_error: 0.5339 - val_loss: 0.2437 - val_accuracy: 0.2641 - val_mean_squared_error: 0.4824 - 458s/epoch - 2s/step
+Epoch 52/100
+273/273 - 457s - loss: 0.0757 - accuracy: 0.3267 - mean_squared_error: 0.5493 - val_loss: 0.2626 - val_accuracy: 0.2903 - val_mean_squared_error: 0.5445 - 457s/epoch - 2s/step
+Epoch 53/100
+273/273 - 457s - loss: 0.0738 - accuracy: 0.3489 - mean_squared_error: 0.5354 - val_loss: 0.2449 - val_accuracy: 0.2681 - val_mean_squared_error: 0.5675 - 457s/epoch - 2s/step
+Epoch 54/100
+273/273 - 458s - loss: 0.0748 - accuracy: 0.3301 - mean_squared_error: 0.5412 - val_loss: 0.2747 - val_accuracy: 0.4073 - val_mean_squared_error: 0.3767 - 458s/epoch - 2s/step
+Epoch 55/100
+273/273 - 458s - loss: 0.0756 - accuracy: 0.3345 - mean_squared_error: 0.5530 - val_loss: 0.2348 - val_accuracy: 0.2762 - val_mean_squared_error: 0.5158 - 458s/epoch - 2s/step
+Epoch 56/100
+273/273 - 457s - loss: 0.0701 - accuracy: 0.3336 - mean_squared_error: 0.4922 - val_loss: 0.2630 - val_accuracy: 0.2520 - val_mean_squared_error: 0.4475 - 457s/epoch - 2s/step
+Epoch 57/100
+273/273 - 457s - loss: 0.0727 - accuracy: 0.3347 - mean_squared_error: 0.5138 - val_loss: 0.2673 - val_accuracy: 0.3448 - val_mean_squared_error: 0.4229 - 457s/epoch - 2s/step
+Epoch 58/100
+273/273 - 458s - loss: 0.0738 - accuracy: 0.3290 - mean_squared_error: 0.5461 - val_loss: 0.2662 - val_accuracy: 0.3952 - val_mean_squared_error: 0.4226 - 458s/epoch - 2s/step
+Epoch 59/100
+273/273 - 458s - loss: 0.0736 - accuracy: 0.3719 - mean_squared_error: 0.5538 - val_loss: 0.2496 - val_accuracy: 0.4345 - val_mean_squared_error: 0.4957 - 458s/epoch - 2s/step
+Epoch 60/100
+273/273 - 458s - loss: 0.0708 - accuracy: 0.3409 - mean_squared_error: 0.5348 - val_loss: 0.2306 - val_accuracy: 0.4204 - val_mean_squared_error: 0.4535 - 458s/epoch - 2s/step
+Epoch 61/100
+273/273 - 457s - loss: 0.0720 - accuracy: 0.3241 - mean_squared_error: 0.5185 - val_loss: 0.2369 - val_accuracy: 0.2873 - val_mean_squared_error: 0.4542 - 457s/epoch - 2s/step
+Epoch 62/100
+273/273 - 458s - loss: 0.0706 - accuracy: 0.3494 - mean_squared_error: 0.5400 - val_loss: 0.2449 - val_accuracy: 0.2742 - val_mean_squared_error: 0.5034 - 458s/epoch - 2s/step
+Epoch 63/100
+273/273 - 457s - loss: 0.0706 - accuracy: 0.3645 - mean_squared_error: 0.5040 - val_loss: 0.2426 - val_accuracy: 0.4204 - val_mean_squared_error: 0.4675 - 457s/epoch - 2s/step
+Epoch 64/100
+273/273 - 457s - loss: 0.0711 - accuracy: 0.2934 - mean_squared_error: 0.4957 - val_loss: 0.2494 - val_accuracy: 0.2409 - val_mean_squared_error: 0.4784 - 457s/epoch - 2s/step
+Epoch 65/100
+273/273 - 457s - loss: 0.0724 - accuracy: 0.3448 - mean_squared_error: 0.5459 - val_loss: 0.2391 - val_accuracy: 0.4506 - val_mean_squared_error: 0.4891 - 457s/epoch - 2s/step
+Epoch 66/100
+273/273 - 457s - loss: 0.0725 - accuracy: 0.3117 - mean_squared_error: 0.5526 - val_loss: 0.2374 - val_accuracy: 0.3105 - val_mean_squared_error: 0.4804 - 457s/epoch - 2s/step
+Epoch 67/100
+273/273 - 457s - loss: 0.0743 - accuracy: 0.3512 - mean_squared_error: 0.4423 - val_loss: 0.2716 - val_accuracy: 0.1976 - val_mean_squared_error: 0.4407 - 457s/epoch - 2s/step
+Epoch 68/100
+273/273 - 457s - loss: 0.0708 - accuracy: 0.3567 - mean_squared_error: 0.4868 - val_loss: 0.2551 - val_accuracy: 0.3246 - val_mean_squared_error: 0.4424 - 457s/epoch - 2s/step
+Epoch 69/100
+273/273 - 457s - loss: 0.0722 - accuracy: 0.3221 - mean_squared_error: 0.4764 - val_loss: 0.2678 - val_accuracy: 0.2631 - val_mean_squared_error: 0.3563 - 457s/epoch - 2s/step
+Epoch 70/100
+273/273 - 458s - loss: 0.0715 - accuracy: 0.3637 - mean_squared_error: 0.5110 - val_loss: 0.2662 - val_accuracy: 0.3458 - val_mean_squared_error: 0.4548 - 458s/epoch - 2s/step
+Epoch 71/100
+273/273 - 459s - loss: 0.0692 - accuracy: 0.3649 - mean_squared_error: 0.5337 - val_loss: 0.2510 - val_accuracy: 0.2661 - val_mean_squared_error: 0.4209 - 459s/epoch - 2s/step
+Epoch 72/100
+273/273 - 458s - loss: 0.0721 - accuracy: 0.3415 - mean_squared_error: 0.5905 - val_loss: 0.2508 - val_accuracy: 0.2893 - val_mean_squared_error: 0.4558 - 458s/epoch - 2s/step
+Epoch 73/100
+273/273 - 458s - loss: 0.0696 - accuracy: 0.3281 - mean_squared_error: 0.5453 - val_loss: 0.2421 - val_accuracy: 0.3145 - val_mean_squared_error: 0.4742 - 458s/epoch - 2s/step
+Epoch 74/100
+273/273 - 459s - loss: 0.0735 - accuracy: 0.3300 - mean_squared_error: 0.5049 - val_loss: 0.2472 - val_accuracy: 0.3952 - val_mean_squared_error: 0.4420 - 459s/epoch - 2s/step
+Epoch 75/100
+273/273 - 459s - loss: 0.0694 - accuracy: 0.3291 - mean_squared_error: 0.5384 - val_loss: 0.2693 - val_accuracy: 0.2550 - val_mean_squared_error: 0.4956 - 459s/epoch - 2s/step
+Epoch 76/100
+273/273 - 459s - loss: 0.0703 - accuracy: 0.3179 - mean_squared_error: 0.5167 - val_loss: 0.2448 - val_accuracy: 0.4143 - val_mean_squared_error: 0.3977 - 459s/epoch - 2s/step
+Epoch 77/100
+273/273 - 459s - loss: 0.0684 - accuracy: 0.3444 - mean_squared_error: 0.5170 - val_loss: 0.2471 - val_accuracy: 0.2349 - val_mean_squared_error: 0.4745 - 459s/epoch - 2s/step
+Epoch 78/100
+273/273 - 459s - loss: 0.0701 - accuracy: 0.3198 - mean_squared_error: 0.5082 - val_loss: 0.2278 - val_accuracy: 0.4123 - val_mean_squared_error: 0.4473 - 459s/epoch - 2s/step
+Epoch 79/100
+273/273 - 458s - loss: 0.0705 - accuracy: 0.3206 - mean_squared_error: 0.5178 - val_loss: 0.2537 - val_accuracy: 0.3105 - val_mean_squared_error: 0.3504 - 458s/epoch - 2s/step
+Epoch 80/100
+273/273 - 459s - loss: 0.0671 - accuracy: 0.3038 - mean_squared_error: 0.5534 - val_loss: 0.2546 - val_accuracy: 0.3962 - val_mean_squared_error: 0.4529 - 459s/epoch - 2s/step
+Epoch 81/100
+273/273 - 458s - loss: 0.0702 - accuracy: 0.3087 - mean_squared_error: 0.5399 - val_loss: 0.2432 - val_accuracy: 0.3286 - val_mean_squared_error: 0.4633 - 458s/epoch - 2s/step
+Epoch 82/100
+273/273 - 459s - loss: 0.0677 - accuracy: 0.3060 - mean_squared_error: 0.5465 - val_loss: 0.2424 - val_accuracy: 0.4425 - val_mean_squared_error: 0.4622 - 459s/epoch - 2s/step
+Epoch 83/100
+273/273 - 459s - loss: 0.0681 - accuracy: 0.3096 - mean_squared_error: 0.5430 - val_loss: 0.2686 - val_accuracy: 0.2661 - val_mean_squared_error: 0.3764 - 459s/epoch - 2s/step
+Epoch 84/100
+273/273 - 459s - loss: 0.0701 - accuracy: 0.3877 - mean_squared_error: 0.5295 - val_loss: 0.2246 - val_accuracy: 0.3690 - val_mean_squared_error: 0.3798 - 459s/epoch - 2s/step
+Epoch 85/100
+273/273 - 459s - loss: 0.0726 - accuracy: 0.3475 - mean_squared_error: 0.4984 - val_loss: 0.2686 - val_accuracy: 0.3770 - val_mean_squared_error: 0.4033 - 459s/epoch - 2s/step
+Epoch 86/100
+273/273 - 459s - loss: 0.0697 - accuracy: 0.3021 - mean_squared_error: 0.5078 - val_loss: 0.2406 - val_accuracy: 0.3619 - val_mean_squared_error: 0.4328 - 459s/epoch - 2s/step
+Epoch 87/100
+273/273 - 459s - loss: 0.0710 - accuracy: 0.3021 - mean_squared_error: 0.5037 - val_loss: 0.2655 - val_accuracy: 0.2853 - val_mean_squared_error: 0.4419 - 459s/epoch - 2s/step
+Epoch 88/100
+273/273 - 459s - loss: 0.0684 - accuracy: 0.2593 - mean_squared_error: 0.5055 - val_loss: 0.2290 - val_accuracy: 0.3720 - val_mean_squared_error: 0.4691 - 459s/epoch - 2s/step
+Epoch 89/100
+273/273 - 460s - loss: 0.0680 - accuracy: 0.3494 - mean_squared_error: 0.5121 - val_loss: 0.2188 - val_accuracy: 0.3065 - val_mean_squared_error: 0.4116 - 460s/epoch - 2s/step
+Epoch 90/100
+273/273 - 458s - loss: 0.0669 - accuracy: 0.3071 - mean_squared_error: 0.5281 - val_loss: 0.2516 - val_accuracy: 0.3740 - val_mean_squared_error: 0.4373 - 458s/epoch - 2s/step
+Epoch 91/100
+273/273 - 459s - loss: 0.0680 - accuracy: 0.3127 - mean_squared_error: 0.5234 - val_loss: 0.2559 - val_accuracy: 0.3861 - val_mean_squared_error: 0.3935 - 459s/epoch - 2s/step
+Epoch 92/100
+273/273 - 458s - loss: 0.0688 - accuracy: 0.3193 - mean_squared_error: 0.5414 - val_loss: 0.2510 - val_accuracy: 0.3861 - val_mean_squared_error: 0.5295 - 458s/epoch - 2s/step
+Epoch 93/100
+273/273 - 459s - loss: 0.0672 - accuracy: 0.3259 - mean_squared_error: 0.5428 - val_loss: 0.2673 - val_accuracy: 0.3639 - val_mean_squared_error: 0.4100 - 459s/epoch - 2s/step
+Epoch 94/100
+273/273 - 459s - loss: 0.0698 - accuracy: 0.3299 - mean_squared_error: 0.5312 - val_loss: 0.2655 - val_accuracy: 0.2944 - val_mean_squared_error: 0.3961 - 459s/epoch - 2s/step
+Epoch 95/100
+273/273 - 459s - loss: 0.0666 - accuracy: 0.3139 - mean_squared_error: 0.5654 - val_loss: 0.2449 - val_accuracy: 0.2429 - val_mean_squared_error: 0.4565 - 459s/epoch - 2s/step
+Epoch 96/100
+273/273 - 459s - loss: 0.0687 - accuracy: 0.3236 - mean_squared_error: 0.5098 - val_loss: 0.2465 - val_accuracy: 0.4536 - val_mean_squared_error: 0.4440 - 459s/epoch - 2s/step
+Epoch 97/100
+273/273 - 460s - loss: 0.0685 - accuracy: 0.3448 - mean_squared_error: 0.5015 - val_loss: 0.2567 - val_accuracy: 0.3075 - val_mean_squared_error: 0.3952 - 460s/epoch - 2s/step
+Epoch 98/100
+273/273 - 458s - loss: 0.0689 - accuracy: 0.3045 - mean_squared_error: 0.5379 - val_loss: 0.2481 - val_accuracy: 0.2480 - val_mean_squared_error: 0.4329 - 458s/epoch - 2s/step
+Epoch 99/100
+273/273 - 456s - loss: 0.0688 - accuracy: 0.3348 - mean_squared_error: 0.5392 - val_loss: 0.2452 - val_accuracy: 0.2560 - val_mean_squared_error: 0.4524 - 456s/epoch - 2s/step
+Epoch 100/100
+273/273 - 457s - loss: 0.0675 - accuracy: 0.3020 - mean_squared_error: 0.5055 - val_loss: 0.2512 - val_accuracy: 0.2964 - val_mean_squared_error: 0.3272 - 457s/epoch - 2s/step
+ 1/31 [..............................] - ETA: 21s - loss: 0.2513 - accuracy: 0.3438 - mean_squared_error: 0.4627 2/31 [>.............................] - ETA: 13s - loss: 0.2503 - accuracy: 0.3281 - mean_squared_error: 0.4639 3/31 [=>............................] - ETA: 13s - loss: 0.2512 - accuracy: 0.3229 - mean_squared_error: 0.4641 4/31 [==>...........................] - ETA: 12s - loss: 0.2522 - accuracy: 0.3203 - mean_squared_error: 0.4638 5/31 [===>..........................] - ETA: 12s - loss: 0.2537 - accuracy: 0.3187 - mean_squared_error: 0.4626 6/31 [====>.........................] - ETA: 11s - loss: 0.2543 - accuracy: 0.3177 - mean_squared_error: 0.4637 7/31 [=====>........................] - ETA: 11s - loss: 0.2546 - accuracy: 0.3170 - mean_squared_error: 0.4643 8/31 [======>.......................] - ETA: 10s - loss: 0.2544 - accuracy: 0.3164 - mean_squared_error: 0.4661 9/31 [=======>......................] - ETA: 10s - loss: 0.2546 - accuracy: 0.3194 - mean_squared_error: 0.467110/31 [========>.....................] - ETA: 9s - loss: 0.2552 - accuracy: 0.3187 - mean_squared_error: 0.4671 11/31 [=========>....................] - ETA: 9s - loss: 0.2559 - accuracy: 0.3210 - mean_squared_error: 0.466212/31 [==========>...................] - ETA: 8s - loss: 0.2568 - accuracy: 0.3255 - mean_squared_error: 0.465013/31 [===========>..................] - ETA: 8s - loss: 0.2579 - accuracy: 0.3269 - mean_squared_error: 0.463914/31 [============>.................] - ETA: 7s - loss: 0.2586 - accuracy: 0.3281 - mean_squared_error: 0.463015/31 [=============>................] - ETA: 7s - loss: 0.2591 - accuracy: 0.3292 - mean_squared_error: 0.464816/31 [==============>...............] - ETA: 7s - loss: 0.2597 - accuracy: 0.3281 - mean_squared_error: 0.466017/31 [===============>..............] - ETA: 6s - loss: 0.2603 - accuracy: 0.3272 - mean_squared_error: 0.467418/31 [================>.............] - ETA: 6s - loss: 0.2607 - accuracy: 0.3264 - mean_squared_error: 0.468119/31 [=================>............] - ETA: 5s - loss: 0.2610 - accuracy: 0.3257 - mean_squared_error: 0.468720/31 [==================>...........] - ETA: 5s - loss: 0.2616 - accuracy: 0.3266 - mean_squared_error: 0.468821/31 [===================>..........] - ETA: 4s - loss: 0.2620 - accuracy: 0.3274 - mean_squared_error: 0.469622/31 [====================>.........] - ETA: 4s - loss: 0.2621 - accuracy: 0.3267 - mean_squared_error: 0.470723/31 [=====================>........] - ETA: 3s - loss: 0.2621 - accuracy: 0.3247 - mean_squared_error: 0.471924/31 [======================>.......] - ETA: 3s - loss: 0.2620 - accuracy: 0.3229 - mean_squared_error: 0.473025/31 [=======================>......] - ETA: 2s - loss: 0.2618 - accuracy: 0.3200 - mean_squared_error: 0.474526/31 [========================>.....] - ETA: 2s - loss: 0.2617 - accuracy: 0.3173 - mean_squared_error: 0.476127/31 [=========================>....] - ETA: 1s - loss: 0.2615 - accuracy: 0.3137 - mean_squared_error: 0.477728/31 [==========================>...] - ETA: 1s - loss: 0.2613 - accuracy: 0.3103 - mean_squared_error: 0.478629/31 [===========================>..] - ETA: 0s - loss: 0.2609 - accuracy: 0.3071 - mean_squared_error: 0.479830/31 [============================>.] - ETA: 0s - loss: 0.2604 - accuracy: 0.3042 - mean_squared_error: 0.480431/31 [==============================] - ETA: 0s - loss: 0.2598 - accuracy: 0.3014 - mean_squared_error: 0.480431/31 [==============================] - 15s 461ms/step - loss: 0.2598 - accuracy: 0.3014 - mean_squared_error: 0.4804
+test loss, test acc: [0.25976821780204773, 0.30141130089759827, 0.480438232421875]
+############### PREDICTIONS ###############
+----------0----------
+phi1 4923.0
+PHI 3249.0
+phi2 2115.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 162ms/step
+predicted values [[-10.847195 -24.27463  -13.333447]]
+----------1----------
+phi1 6840.0
+PHI 7533.0
+phi2 261.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 39ms/step
+predicted values [[-9.55081  -9.078559 27.68024 ]]
+----------2----------
+phi1 1602.0
+PHI 5742.0
+phi2 4572.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 36ms/step
+predicted values [[-17.872797 -45.706066 -29.998379]]
+----------3----------
+phi1 1575.0
+PHI 1395.0
+phi2 4536.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 39ms/step
+predicted values [[-68.35331    -3.8933606  36.743656 ]]
+----------4----------
+phi1 4275.0
+PHI 2934.0
+phi2 2682.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 41ms/step
+predicted values [[-3.4778676 11.821884  18.696054 ]]
+----------5----------
+phi1 2996.9999999999995
+PHI 3564.0
+phi2 2565.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 38ms/step
+predicted values [[ -5.726287 -32.445095   8.419568]]
+----------6----------
+phi1 5472.0
+PHI 2538.0
+phi2 891.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 43ms/step
+predicted values [[-11.74376    8.141519  58.606274]]
+----------7----------
+phi1 2394.0
+PHI 612.0
+phi2 6822.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 36ms/step
+predicted values [[ 18.539011   -44.619007    -0.08473467]]
+----------8----------
+phi1 3536.9999999999995
+PHI 3681.0
+phi2 684.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 37ms/step
+predicted values [[-50.7603    18.79278   18.427286]]
+----------9----------
+phi1 351.0
+PHI 7866.000000000001
+phi2 2322.0
+1/1 [==============================] - ETA: 0s1/1 [==============================] - 0s 37ms/step
+predicted values [[ 44.07997     6.8365054 -47.089966 ]]
+############### PREDICTIONS ###############
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 15205053: <s202741-train> in cluster <dcc> Done
+
+Job <s202741-train> was submitted from host <n-62-20-1> by user <s202741> in cluster <dcc> at Tue Jan 17 18:47:32 2023
+Job was executed on host(s) <4*n-62-11-13>, in queue <gpuv100>, as user <s202741> in cluster <dcc> at Tue Jan 17 19:01:39 2023
+</zhome/ab/7/153983> was used as the home directory.
+</zhome/ab/7/153983/project> was used as the working directory.
+Started at Tue Jan 17 19:01:39 2023
+Terminated at Wed Jan 18 07:45:55 2023
+Results reported at Wed Jan 18 07:45:55 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+### General options
+### -- specify queue --   NOTE: TitanX is significantly faster than K80
+#BSUB -q gpuv100
+#BSUB -gpu "num=1:mode=exclusive_process"
+### -- set the job Name --
+#BSUB -J s202741-train
+### -- ask for number of cores (default: 1) --
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
+#BSUB -W 15:30
+# request 5GB of memory
+#BSUB -R "rusage[mem=5GB]"
+### -- Specify the output and error file. %J is the job-id --
+### -- -o and -e mean append, -oo and -eo mean overwrite --
+#BSUB -o Logs/adam_0001%J.out
+# -- end of LSF options --
+
+# Necessary modules
+cd project 
+source venv/bin/activate
+
+module swap cuda/12.0
+
+python trainModelIter2.py 100 "Adam(learning_rate=0.001, amsgrad = False)"  "[\"accuracy\", tf.keras.metrics.MeanSquaredError(name=\"mean_squared_error\", dtype=None)]" "abs_loss_function" "black_background_500x500.csv" 2 "adam_0001"
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   168843.97 sec.
+    Max Memory :                                 4771 MB
+    Average Memory :                             4549.19 MB
+    Total Requested Memory :                     20480.00 MB
+    Delta Memory :                               15709.00 MB
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                29
+    Run time :                                   45858 sec.
+    Turnaround time :                            46703 sec.
+
+The output (if any) is above this job summary.
+

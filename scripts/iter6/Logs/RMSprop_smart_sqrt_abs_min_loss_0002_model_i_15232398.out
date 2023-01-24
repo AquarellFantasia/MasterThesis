@@ -1,0 +1,149 @@
+Loaded dependency [python3/3.10.7]: gcc/11.3.0-binutils-2.38
+Loaded module: python3/3.10.7
+
+Loading python3/3.10.7
+  Loading requirement: gcc/11.3.0-binutils-2.38
+Loaded module: cuda/11.6
+Loaded module: cudnn/v8.3.2.44-prod-cuda-11.X
+2023-01-24 16:32:56.048332: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-24 16:32:56.186035: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-01-24 16:32:57.382645: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/cuda/11.6.0/lib64:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-24 16:32:57.383251: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/cuda/11.6.0/lib64:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-24 16:32:57.383261: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+2023-01-24 16:33:00.216526: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-24 16:33:00.814541: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1613] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30960 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:d8:00.0, compute capability: 7.0
+Epochs:  100
+Optimizer:  RMSprop(learning_rate=0.002)
+Loss function name:  smart_sqrt_abs_min_loss
+Csv file used:  black_background_500x500.csv
+Verbose:  2
+Unique name:  RMSprop_smart_sqrt_abs_min_loss_0002_model_i_
+Output folder:  iter6
+Model name:  load_model_i
+ 
+        ################ MODEL ############### 
+
+        inputs = keras.Input(shape=(input_size, input_size, 1))
+        x = layers.Conv2D(filters=32, kernel_size=11, activation="relu")(inputs)
+        x = layers.Conv2D(filters=32, kernel_size=11, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=11, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=2)(x)
+        x = layers.Conv2D(filters=32, kernel_size=5, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=5, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=5, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=2)(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=2)(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=2)(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=32, kernel_size=3, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=4)(x)
+        x = layers.Flatten()(x)
+        x = layers.Dense(210, activation="relu")(x)
+        x = layers.Dense(210, activation="relu")(x)
+        x = layers.Dense(210, activation="relu")(x)
+        x = layers.Dense(32, activation="sigmoid")(x)
+        outputs = layers.Dense(3)(x)
+    
+Model: "model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ input_1 (InputLayer)        [(None, 500, 500, 1)]     0         
+                                                                 
+ conv2d (Conv2D)             (None, 490, 490, 32)      3904      
+                                                                 
+ conv2d_1 (Conv2D)           (None, 480, 480, 32)      123936    
+                                                                 
+ conv2d_2 (Conv2D)           (None, 470, 470, 32)      123936    
+                                                                 
+ max_pooling2d (MaxPooling2D  (None, 235, 235, 32)     0         
+ )                                                               
+                                                                 
+ conv2d_3 (Conv2D)           (None, 231, 231, 32)      25632     
+                                                                 
+ conv2d_4 (Conv2D)           (None, 227, 227, 32)      25632     
+                                                                 
+ conv2d_5 (Conv2D)           (None, 223, 223, 32)      25632     
+                                                                 
+ max_pooling2d_1 (MaxPooling  (None, 111, 111, 32)     0         
+ 2D)                                                             
+                                                                 
+ conv2d_6 (Conv2D)           (None, 109, 109, 32)      9248      
+                                                                 
+ conv2d_7 (Conv2D)           (None, 107, 107, 32)      9248      
+                                                                 
+ conv2d_8 (Conv2D)           (None, 105, 105, 32)      9248      
+                                                                 
+ max_pooling2d_2 (MaxPooling  (None, 52, 52, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_9 (Conv2D)           (None, 50, 50, 32)        9248      
+                                                                 
+ conv2d_10 (Conv2D)          (None, 48, 48, 32)        9248      
+                                                                 
+ conv2d_11 (Conv2D)          (None, 46, 46, 32)        9248      
+                                                                 
+ max_pooling2d_3 (MaxPooling  (None, 23, 23, 32)       0         
+ 2D)                                                             
+                                                                 
+ conv2d_12 (Conv2D)          (None, 21, 21, 32)        9248      
+                                                                 
+ conv2d_13 (Conv2D)          (None, 19, 19, 32)        9248      
+                                                                 
+ conv2d_14 (Conv2D)          (None, 17, 17, 32)        9248      
+                                                                 
+ max_pooling2d_4 (MaxPooling  (None, 4, 4, 32)         0         
+ 2D)                                                             
+                                                                 
+ flatten (Flatten)           (None, 512)               0         
+                                                                 
+ dense (Dense)               (None, 210)               107730    
+                                                                 
+ dense_1 (Dense)             (None, 210)               44310     
+                                                                 
+ dense_2 (Dense)             (None, 210)               44310     
+                                                                 
+ dense_3 (Dense)             (None, 32)                6752      
+                                                                 
+ dense_4 (Dense)             (None, 3)                 99        
+                                                                 
+=================================================================
+Total params: 615,105
+Trainable params: 615,105
+Non-trainable params: 0
+_________________________________________________________________
+/zhome/ab/7/153983/project/venv/lib/python3.10/site-packages/keras/utils/image_utils.py:409: UserWarning: grayscale is deprecated. Please use color_mode = "grayscale"
+  warnings.warn(
+Epoch 1/100
+2023-01-24 16:33:04.242255: I tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:428] Loaded cuDNN version 8302
+273/273 - 201s - loss: 0.3382 - smart_sqrt_abs_min_loss: 0.3382 - accuracy: 0.3103 - val_loss: 0.2692 - val_smart_sqrt_abs_min_loss: 0.2692 - val_accuracy: 0.2923 - 201s/epoch - 734ms/step
+Epoch 2/100
+273/273 - 178s - loss: 0.2889 - smart_sqrt_abs_min_loss: 0.2889 - accuracy: 0.3190 - val_loss: 0.2646 - val_smart_sqrt_abs_min_loss: 0.2646 - val_accuracy: 0.3054 - 178s/epoch - 650ms/step
+Epoch 3/100
+273/273 - 177s - loss: 0.2743 - smart_sqrt_abs_min_loss: 0.2743 - accuracy: 0.3401 - val_loss: 0.2283 - val_smart_sqrt_abs_min_loss: 0.2283 - val_accuracy: 0.4103 - 177s/epoch - 647ms/step
+Epoch 4/100
+273/273 - 177s - loss: 0.2469 - smart_sqrt_abs_min_loss: 0.2469 - accuracy: 0.3496 - val_loss: 0.2455 - val_smart_sqrt_abs_min_loss: 0.2455 - val_accuracy: 0.2732 - 177s/epoch - 649ms/step
+Epoch 5/100
+273/273 - 177s - loss: 0.2492 - smart_sqrt_abs_min_loss: 0.2492 - accuracy: 0.3744 - val_loss: 0.2525 - val_smart_sqrt_abs_min_loss: 0.2525 - val_accuracy: 0.2903 - 177s/epoch - 647ms/step
+Epoch 6/100
+273/273 - 177s - loss: 0.2691 - smart_sqrt_abs_min_loss: 0.2691 - accuracy: 0.3408 - val_loss: 0.2535 - val_smart_sqrt_abs_min_loss: 0.2535 - val_accuracy: 0.2601 - 177s/epoch - 647ms/step
+Epoch 7/100
+273/273 - 177s - loss: 0.2806 - smart_sqrt_abs_min_loss: 0.2806 - accuracy: 0.3302 - val_loss: 0.2552 - val_smart_sqrt_abs_min_loss: 0.2552 - val_accuracy: 0.3458 - 177s/epoch - 649ms/step
+Epoch 8/100
+273/273 - 178s - loss: 0.2441 - smart_sqrt_abs_min_loss: 0.2441 - accuracy: 0.3529 - val_loss: 0.2847 - val_smart_sqrt_abs_min_loss: 0.2847 - val_accuracy: 0.2732 - 178s/epoch - 651ms/step
+Epoch 9/100
+273/273 - 177s - loss: 0.2616 - smart_sqrt_abs_min_loss: 0.2616 - accuracy: 0.3241 - val_loss: 0.3358 - val_smart_sqrt_abs_min_loss: 0.3358 - val_accuracy: 0.2389 - 177s/epoch - 649ms/step
+Epoch 10/100
+273/273 - 178s - loss: 0.2394 - smart_sqrt_abs_min_loss: 0.2394 - accuracy: 0.3791 - val_loss: 0.2564 - val_smart_sqrt_abs_min_loss: 0.2564 - val_accuracy: 0.2772 - 178s/epoch - 651ms/step
+Epoch 11/100
+273/273 - 177s - loss: 0.2389 - smart_sqrt_abs_min_loss: 0.2389 - accuracy: 0.3399 - val_loss: 0.2494 - val_smart_sqrt_abs_min_loss: 0.2494 - val_accuracy: 0.4062 - 177s/epoch - 647ms/step
+Epoch 12/100
