@@ -1,0 +1,27 @@
+
+#!/bin/bash
+### General options
+### -- specify queue --   NOTE: TitanX is significantly faster than K80
+#BSUB -q gpuv100
+#BSUB -gpu "num=1:mode=exclusive_process"
+### -- set the job Name --
+#BSUB -J s202741-train
+### -- ask for number of cores (default: 1) --
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
+#BSUB -W 5:00
+# request 5GB of memory
+#BSUB -R "rusage[mem=5GB]"
+### -- Specify the output and error file. %J is the job-id --
+### -- -o and -e mean append, -oo and -eo mean overwrite --
+#BSUB -o iter7/Logs/RMSprop_abs_loss_function_0001_model_g_%J.out
+# -- end of LSF options --
+
+# Necessary modules
+cd ..
+source venv/bin/activate
+
+python trainModelIter4.py 100 "RMSprop(learning_rate=0.001)" "abs_loss_function" "black_background_500x500.csv" 2 "RMSprop_abs_loss_function_0001_model_g_" "iter7" "load_model_g"
+
+    
