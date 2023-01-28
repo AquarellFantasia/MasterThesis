@@ -1,0 +1,89 @@
+Loaded dependency [python3/3.10.7]: gcc/11.3.0-binutils-2.38
+Loaded module: python3/3.10.7
+
+Loading python3/3.10.7
+  Loading requirement: gcc/11.3.0-binutils-2.38
+Loaded module: cuda/11.6
+Loaded module: cudnn/v8.3.2.44-prod-cuda-11.X
+2023-01-28 04:07:02.258875: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F AVX512_VNNI FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 04:07:02.414183: I tensorflow/core/util/port.cc:104] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-01-28 04:07:03.583832: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/cuda/11.6.0/lib64:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-28 04:07:03.584381: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /appl/cudnn/v8.3.2.44-prod-cuda-11.5/lib:/appl/cuda/11.6.0/lib64:/appl/python/3.10.7/lib:/appl/gcc/11.3.0-binutils-2.38/lib64:/appl/gcc/11.3.0-binutils-2.38/lib:/lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+2023-01-28 04:07:03.584392: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Epochs:  100
+Optimizer:  RMSprop(learning_rate=0.001)
+Loss function name:  abs_loss_function
+Csv file used:  black_background_500x500.csv
+Verbose:  2
+Unique name:  RMSprop_abs_loss_function_0001_model_n_
+Output folder:  iter8
+Model name:  load_model_n
+Traceback (most recent call last):
+  File "/zhome/ab/7/153983/project/trainModelIter4.py", line 579, in <module>
+    model_func = eval(model_name)
+  File "<string>", line 1, in <module>
+NameError: name 'load_model_n' is not defined. Did you mean: 'load_model_a'?
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 15258599: <s202741-train> in cluster <dcc> Exited
+
+Job <s202741-train> was submitted from host <n-62-20-1> by user <s202741> in cluster <dcc> at Fri Jan 27 20:38:34 2023
+Job was executed on host(s) <4*n-62-11-16>, in queue <gpuv100>, as user <s202741> in cluster <dcc> at Sat Jan 28 04:06:59 2023
+</zhome/ab/7/153983> was used as the home directory.
+</zhome/ab/7/153983/project/scripts> was used as the working directory.
+Started at Sat Jan 28 04:06:59 2023
+Terminated at Sat Jan 28 04:07:06 2023
+Results reported at Sat Jan 28 04:07:06 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+
+#!/bin/bash
+### General options
+### -- specify queue --   NOTE: TitanX is significantly faster than K80
+#BSUB -q gpuv100
+#BSUB -gpu "num=1:mode=exclusive_process"
+### -- set the job Name --
+#BSUB -J s202741-train
+### -- ask for number of cores (default: 1) --
+#BSUB -n 4
+#BSUB -R "span[hosts=1]"
+### -- set walltime limit: hh:mm --  maximum 24 hours for GPU-queues right now
+#BSUB -W 5:00
+# request 5GB of memory
+#BSUB -R "rusage[mem=5GB]"
+### -- Specify the output and error file. %J is the job-id --
+### -- -o and -e mean append, -oo and -eo mean overwrite --
+#BSUB -o iter8/Logs/RMSprop_abs_loss_function_0001_model_n_%J.out
+# -- end of LSF options --
+
+# Necessary modules
+cd ..
+source venv/bin/activate
+
+python trainModelIter4.py 100 "RMSprop(learning_rate=0.001)" "abs_loss_function" "black_background_500x500.csv" 2 "RMSprop_abs_loss_function_0001_model_n_" "iter8" "load_model_n"
+
+    
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   3.20 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     20480.00 MB
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   7 sec.
+    Turnaround time :                            26912 sec.
+
+The output (if any) is above this job summary.
+

@@ -580,6 +580,170 @@ model_func = eval(model_name)
 model = model_func()
 model.summary()
 
+def load_model_l():
+    print(''' 
+        ################ MODEL ############### \n 
+    filt = 16
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(inputs)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(128, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+    ''')
+    filt = 16
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(inputs)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(128, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+    model = keras.Model(inputs=inputs, outputs=outputs)
+    return model
+
+def load_model_m():
+    print(''' 
+        ################ MODEL ############### \n 
+    filt = 32
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=11, activation="relu")(inputs)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(128, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+
+    ''')
+    filt = 32
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=11, activation="relu")(inputs)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(128, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+    model = keras.Model(inputs=inputs, outputs=outputs)
+    return model
+
+def load_model_n():
+    print(''' 
+        ################ MODEL ############### \n 
+    filt = 64
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(inputs)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=2)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(128, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+
+    ''')
+    filt = 64
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(inputs)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=2)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(128, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+    model = keras.Model(inputs=inputs, outputs=outputs)
+    return model
+
+def load_model_o():
+    print(''' 
+        ################ MODEL ############### \n 
+       filt = 32
+        inputs = keras.Input(shape=(input_size, input_size, 1))
+        x = layers.Conv2D(filters=filt, kernel_size=11, activation="relu")(inputs)
+        x = layers.MaxPooling2D(pool_size=4)(x)
+        x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=4)(x)
+        x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=4)(x)
+        x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+        x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+        x = layers.MaxPooling2D(pool_size=2)(x)
+        x = layers.Flatten()(x)
+        x = layers.Dense(32, activation="relu")(x)
+        x = layers.Dense(16, activation="relu")(x)
+        outputs = layers.Dense(3)(x)
+
+    ''')
+    filt = 32
+    inputs = keras.Input(shape=(input_size, input_size, 1))
+    x = layers.Conv2D(filters=filt, kernel_size=11, activation="relu")(inputs)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=4)(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.Conv2D(filters=filt, kernel_size=3, activation="relu")(x)
+    x = layers.MaxPooling2D(pool_size=2)(x)
+    x = layers.Flatten()(x)
+    x = layers.Dense(32, activation="relu")(x)
+    x = layers.Dense(16, activation="relu")(x)
+    outputs = layers.Dense(3)(x)
+
+    model = keras.Model(inputs=inputs, outputs=outputs)
+    return model
+
 ######################################################################    
 ########################## Loss functions ############################    
 ###################################################################### 
