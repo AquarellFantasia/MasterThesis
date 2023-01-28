@@ -575,10 +575,6 @@ def load_model_k():
     outputs = layers.Dense(3)(x)
     model = keras.Model(inputs=inputs, outputs=outputs)
     return model
-    
-model_func = eval(model_name)
-model = model_func()
-model.summary()
 
 def load_model_l():
     print(''' 
@@ -745,6 +741,14 @@ def load_model_o():
     return model
 
 ######################################################################    
+########################## Load model ################################    
+###################################################################### 
+
+model_func = eval(model_name)
+model = model_func()
+model.summary()
+
+######################################################################    
 ########################## Loss functions ############################    
 ###################################################################### 
 
@@ -857,7 +861,7 @@ results = model.evaluate(test_gen, batch_size=32)
 print("test loss, test acc:", results)
 
 ######################################################################    
-################## Saving accuracu and loss graph ####################    
+################## Saving accuracy and loss graph ####################    
 ###################################################################### 
 
 fig = plt.figure(figsize=(12,5))
