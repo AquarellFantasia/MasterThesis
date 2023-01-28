@@ -383,3 +383,7 @@ Epoch 67/100
 Epoch 68/100
 273/273 - 76s - loss: 0.0589 - abs_loss_function: 0.0589 - accuracy: 0.3969 - val_loss: 0.1351 - val_abs_loss_function: 0.1351 - val_accuracy: 0.3720 - 76s/epoch - 278ms/step
 Epoch 69/100
+273/273 - 75s - loss: 0.0627 - abs_loss_function: 0.0627 - accuracy: 0.3707 - val_loss: 0.1240 - val_abs_loss_function: 0.1240 - val_accuracy: 0.3085 - 75s/epoch - 275ms/step
+Epoch 70/100
+273/273 - 75s - loss: 0.0630 - abs_loss_function: 0.0630 - accuracy: 0.3972 - val_loss: 0.1485 - val_abs_loss_function: 0.1485 - val_accuracy: 0.4486 - 75s/epoch - 273ms/step
+Epoch 71/100

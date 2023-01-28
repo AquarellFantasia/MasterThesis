@@ -293,3 +293,7 @@ Epoch 44/100
 Epoch 45/100
 273/273 - 81s - loss: 0.0721 - smart_sqrt_abs_min_loss: 0.0721 - accuracy: 0.6192 - val_loss: 0.1724 - val_smart_sqrt_abs_min_loss: 0.1724 - val_accuracy: 0.4587 - 81s/epoch - 295ms/step
 Epoch 46/100
+273/273 - 85s - loss: 0.0660 - smart_sqrt_abs_min_loss: 0.0660 - accuracy: 0.5935 - val_loss: 0.1714 - val_smart_sqrt_abs_min_loss: 0.1714 - val_accuracy: 0.5333 - 85s/epoch - 310ms/step
+Epoch 47/100
+273/273 - 81s - loss: 0.0662 - smart_sqrt_abs_min_loss: 0.0662 - accuracy: 0.5978 - val_loss: 0.1640 - val_smart_sqrt_abs_min_loss: 0.1640 - val_accuracy: 0.4667 - 81s/epoch - 296ms/step
+Epoch 48/100

@@ -123,3 +123,5 @@ Epoch 8/100
 Epoch 9/100
 273/273 - 83s - loss: 0.4561 - sqrt_abs_min_loss: 0.4561 - accuracy: 0.3068 - val_loss: 0.4840 - val_sqrt_abs_min_loss: 0.4840 - val_accuracy: 0.3407 - 83s/epoch - 305ms/step
 Epoch 10/100
+273/273 - 87s - loss: 0.4663 - sqrt_abs_min_loss: 0.4663 - accuracy: 0.3090 - val_loss: 0.4805 - val_sqrt_abs_min_loss: 0.4805 - val_accuracy: 0.4214 - 87s/epoch - 318ms/step
+Epoch 11/100
